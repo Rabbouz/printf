@@ -16,7 +16,7 @@ int _putchar(char c);
 /* handle_functions.c */
 
 int handle_string(va_list mt);
-int handle_percent(va_list md);
+int handle_percent(void);
 int handle_char(va_list mp);
 int handle_int(int i);
 
