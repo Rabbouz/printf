@@ -1,5 +1,5 @@
 #include <stdarg.h>
-#include "header.h"
+#include "main.h"
 /**
  * handle_char - A handler function that prints a character
  *@mp: argument

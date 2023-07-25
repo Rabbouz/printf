@@ -1,4 +1,4 @@
-#include "header.h"
+#include "main.h"
 #include <stdio.h>
 /**
  *_printf - A function that prints number of characters
