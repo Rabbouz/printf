@@ -20,4 +20,6 @@ int handle_percent(va_list md);
 int handle_char(va_list mp);
 int handle_int(va_list nt);
 
+/* utility functions */
+
 #endif /* MAIN_H */

@@ -1,5 +1,7 @@
 #include <stdarg.h>
 #include "main.h"
+
+int printed_number(int num);
 /**
  * handle_int - A handler function that prints an integer
  * @nt: argument
