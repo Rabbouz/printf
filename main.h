@@ -1,5 +1,5 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,5 +18,6 @@ int _putchar(char c);
 int handle_string(va_list mt);
 int handle_percent(va_list md);
 int handle_char(va_list mp);
+int handle_int(va_list nt);
 
-#endif /* HEADER_H */
+#endif /* MAIN_H */
