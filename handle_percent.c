@@ -1,33 +1,12 @@
-#include <stdarg.h>
 #include "main.h"
 
 /**
- *handle_percent - A handler function that prints a percent
- *@md: argument
- * Return: int
+ * handle_percent - A function that prints a percent character
+ * Return: 1 (number of characters printed for '%')
  */
 
-int handle_percent(va_list md)
+int handle_percent(void)
 {
-	char *str = va_arg(md, char *);
-
-	int i = 0;
-
-	while (str[i] != '\0')
-	{
-		if (str[i] == '%')
-		{
-			i++;
-			if (str[i] == '%')
-			{
-				_putchar('%');
-			}
-		}
-		else
-		{
-			_putchar(str[i]);
-		}
-		i++;
-	}
-	return (0);
+    _putchar('%');
+    return 1;
 }
