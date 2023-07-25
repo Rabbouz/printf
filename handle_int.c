@@ -1,40 +1,51 @@
-#include <stdarg.h>
 #include "main.h"
+#include <stdio.h>
 
-int printed_number(int num);
 /**
  * handle_int - A handler function that prints an integer
- * @nt: argument
+ * @i: integer
  * Return: number of characters printed
  */
-int handle_int(va_list nt)
-{
-	int num = va_arg(nt, int);
-	int cnt = 0;
 
-	if (num < 0)
+
+int handle_int(int i)
+{
+
+	long int num;
+	int count;
+	int aux_v, bs;
+
+	count = 0;
+	numb = i;
+
+	if
 	{
-		_putchar('-');
-		cnt++;
-		num = -num;
+		num *= -1;
+		_putchar(45);
+		count++;
 	}
-	cnt += printed_number(num);
-	return (cnt);
-}
-/**
- * printed_number - A  function that prints an integer
- * @num: integer
- * Return:  number of characters printed
- */
-int printed_number(int num)
-{
-	int cnt = 0;
+	if (num >= 0 && num <= 9)
+	{
+		_putchar(num + 48);
+		count++;
+	}
+	if (num > 9)
+	{
+		bs = 10;
 
-	if (num / 10 != 0)
-		cnt += printed_number(num / 10);
+		while (num / bs > 9)
+		{
+			bs *= 10;
+		}
 
-	_putchar('0' + (num % 10));
-	cnt++;
-
-	return (cnt);
+		while (bs > 0)
+		{
+			aux_v = num / bs;
+			num = num % bs;
+			_putchar(aux_v + 48);
+			bs = bs / 10;
+			count++;
+		}
+	}
+	return (count);
 }
