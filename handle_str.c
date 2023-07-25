@@ -2,19 +2,19 @@
 #include "main.h"
 
 /**
- * handle_string - A handler function that prints a string
- *@mt: argument
- * Return: int
- **/
-
-int handle_string(va_list mt)
+ * handle_string - A function that prints a string
+ * @s: string
+ * Return: number of characters printed
+ */
+int handle_string(char *s)
 {
-	char *str = va_arg(mt, char *);
 	int cnt = 0;
-	while (*str != '\0')
+
+	while (*s != '\0')
 	{
-		_putchar(*str++);
+		_putchar(*s);
 		cnt++;
+		s++;
 	}
 	return (cnt);
 }

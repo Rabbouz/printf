@@ -7,19 +7,15 @@
 #include <unistd.h>
 #include <limits.h>
 
-
 int _printf(const char *format, ...);
 
 /* modules */
 int _putchar(char c);
 
 /* handle_functions.c */
-
-int handle_string(va_list mt);
+int handle_string(char *s);
 int handle_percent(void);
-int handle_char(va_list mp);
+int handle_char(char *c);
 int handle_int(int i);
-
-/* utility functions */
 
 #endif /* MAIN_H */

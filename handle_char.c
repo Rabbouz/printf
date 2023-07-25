@@ -1,14 +1,14 @@
 #include <stdarg.h>
 #include "main.h"
+
 /**
- * handle_char - A handler function that prints a character
- *@mp: argument
- * Return: int
-*/
+ * handle_char - A function that prints a character
+ * @c: argument
+ * Return: number of characters printed (1)
+ */
 
-int handle_char(va_list mp)
+int handle_char(char *c)
 {
-	char c = (char)va_arg(mp, int);
-
-	return (_putchar(c));
+	_putchar(*c);
+	return (1);
 }
