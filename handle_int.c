@@ -7,7 +7,6 @@
  * Return: number of characters printed
  */
 
-
 int handle_int(int i)
 {
 
@@ -16,9 +15,9 @@ int handle_int(int i)
 	int aux_v, bs;
 
 	count = 0;
-	numb = i;
+	num = i;
 
-	if
+	if (num < 0)
 	{
 		num *= -1;
 		_putchar(45);

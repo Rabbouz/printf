@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 					break;
 				case 'd':
 				case 'i':
-					count += handle_int(num);
+					count += handle_int(va_arg(args, int));
 					break;
 			default:
 			_putchar(*format);
