@@ -9,10 +9,8 @@
 
 int _printf(const char *format, ...);
 
-/* modules */
+/* handle functions */
 int _putchar(char c);
-
-/* handle_functions.c */
 int handle_string(char *s);
 int handle_char(char c);
 int handle_int(int i);
