@@ -14,6 +14,6 @@ int _putchar(char c);
 int handle_string(char *s);
 int handle_char(char c);
 int handle_int(int i);
-int handle_percent();
+int handle_percent(void);
 
 #endif /* MAIN_H */

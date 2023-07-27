@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *_printf - A function that prints number of characters
- *@format: variable
- * Return: number of characters
+ * _printf - A function that prints the given format
+ * @format: The format string containing the specifiers
+ * Return: The number of characters printed
  */
 int _printf(const char *format, ...)
 {
@@ -33,10 +33,10 @@ int _printf(const char *format, ...)
 				case 'i':
 					count += handle_int(va_arg(args, int));
 					break;
-			default:
-			_putchar(*format);
-			count++;
-			break;
+				default:
+					_putchar(*format);
+					count++;
+					break;
 			}
 		}
 		else
@@ -47,5 +47,5 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	return (count);
+	return (count);
 }
