@@ -1,11 +1,11 @@
+#include <stdarg.h>
 #include "main.h"
 
 /**
- * handle_percent - A function that prints a percent character
- * Return: 1 (number of characters printed for '%')
+ *handle_percent - A handler function that prints a percent
+ * Return: int
  */
-
-int handle_percent(void)
+int handle_percent()
 {
 	_putchar('%');
 	return (1);

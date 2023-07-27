@@ -7,45 +7,33 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	va_list args;
+	va_list ap;
+	int count;
 
-	va_start(args, format);
-	if (!format || !format[0])
-		return (-1);
+	va_start(ap, format);
+	count = 0;
+
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			switch (*format)
-			{
-				case 'c':
-					count += handle_char(va_arg(args, char *));
-					break;
-				case 's':
-					count += handle_string(va_arg(args, char *));
-					break;
-				case '%':
-					count += handle_percent();
-					break;
-				case 'd':
-				case 'i':
-					count += handle_int(va_arg(args, int));
-					break;
-			default:
-			_putchar(*format);
-			count++;
-			break;
-			}
+			if (*(format) == 'd' || *(format) == 'i')
+				count += handle_int(va_arg(ap, int));
+			if (*(format) == 's')
+				count += handle_string(va_arg(ap, char *));
+			if (*(format) == 'c')
+				count += handle_char(va_arg(ap, int));
+			if (*(format) == '%')
+				count += handle_percent();
 		}
 		else
 		{
-			_putchar(*format);
+			putchar(*format);
 			count++;
 		}
 		format++;
 	}
-	va_end(args);
+	va_end(ap);
 	return (count);
 }

@@ -7,8 +7,8 @@
  * Return: number of characters printed (1)
  */
 
-int handle_char(char *s)
+int handle_char(char c)
 {
-	_putchar(*s);
+	_putchar(c);
 	return (1);
 }
