@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			if (*(format) == 's')
 				count += handle_string(va_arg(ap, char *));
 			if (*(format) == 'c')
-				count += handle_char(va_arg(ap, int));
+				count += handle_int(va_arg(args, int));
 			if (*(format) == '%')
 				count += handle_percent();
 		}
